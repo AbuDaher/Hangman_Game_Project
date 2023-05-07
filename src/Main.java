@@ -14,7 +14,7 @@ public class Main {
         // 7.
         // 8.
         // 9.
-//        String hidden_word = "avion";
+//        String hiddenWord = "avion";
         Scanner sc = new Scanner(System.in);
         Random rnd = new Random();
         ArrayList<String> words = new ArrayList<>(Arrays.asList("perfume", "transport","manager", "woman", "proportion",
@@ -22,8 +22,8 @@ public class Main {
         int index =  rnd.nextInt(words.size());
         System.out.println("Welcome to Hangman!");
         System.out.print("Cuvantul este: ");
-        String hidden_word = words.get(index) ;
-        char[] stars = new char[hidden_word.length()];
+        String hiddenWord = words.get(index);
+        char[] stars = new char[hiddenWord.length()];
 //        for (int i = 0; i <= stars.length -1; i++){
 //            stars[i]='*';
 //        }a
@@ -33,14 +33,13 @@ public class Main {
         while(true){
         System.out.println("Introdu o litera: ");
         char letter = sc.next().charAt(0);
-        for(int i = 0; i < hidden_word.length(); i++){
-            if(hidden_word.charAt(i) == letter){
+        for(int i = 0; i < hiddenWord.length(); i++){
+            if(hiddenWord.charAt(i) == letter){
                 stars[i] = letter;
             }
-
         }
             System.out.println(stars);
-        if(hidden_word.equals(String.valueOf(stars))){
+        if(hiddenWord.equals(String.valueOf(stars))){
             System.out.println("Felicitari! Ai castigat!");
             break;
         }
